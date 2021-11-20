@@ -1,0 +1,16 @@
+<main class="main">
+
+    <div class="main__cards">
+        <div class="main__cards_card" *ngFor="let product of products">
+            <img src={{product.image_url}} alt="">
+            <h3>
+                <a
+                    [routerLink]="['/products/', product.name]"
+                >
+                    {{product.name}}
+                </a>
+            </h3>
+            <span>R$ {{product.price}}</span>
+        </div>
+    </div>
+</main>
