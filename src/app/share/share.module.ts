@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ContainerLvendasComponent } from './container-lvendas/container-lvendas.component';
 import { HeaderLvendasComponent } from './header-lvendas/header-lvendas.component';
 import { RouterModule } from '@angular/router';
-
+// import {MatIconModule} from '@angular/material'
 
 
 @NgModule({

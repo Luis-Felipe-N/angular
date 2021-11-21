@@ -6,6 +6,7 @@ import { RoutingModule } from './routing.module';
 import { ShareModule } from '../share/share.module';
 import { ProductsComponent } from './products/products.component';
 import { MugsComponent } from './mugs/mugs.component';
+import { CartComponent } from './cart/cart.component';
 
 
 
@@ -13,7 +14,8 @@ import { MugsComponent } from './mugs/mugs.component';
   declarations: [
     HomeComponent,
     ProductsComponent,
-    MugsComponent
+    MugsComponent,
+    CartComponent
   ],
   imports: [
     CommonModule,

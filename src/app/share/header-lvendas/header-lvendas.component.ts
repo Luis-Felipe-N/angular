@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { CartService } from 'src/app/services/cart.service';
+
+
 
 @Component({
   selector: 'app-header-lvendas',
@@ -7,9 +11,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderLvendasComponent implements OnInit {
 
-  constructor() { }
+  amountItems = this.cartService.amountItemsCart()
+  
+  constructor(
+    private cartService: CartService
+  ) { }
 
   ngOnInit(): void {
+    console.log(this.amountItems)
   }
 
+  ngOnChange(): void {
+    console.log('Estado mudou')
+  }
 }

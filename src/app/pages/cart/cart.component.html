@@ -1,0 +1,29 @@
+<app-header-lvendas></app-header-lvendas>
+
+<div class="cart">
+    <header class="cart__header">
+        <a routerLink="/">
+            <svg aria-hidden="true" title="Voltar" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.25 6.75L4.75 12L10.25 17.25"></path>
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.25 12H5"></path>
+            </svg>  
+            Voltar
+        </a>
+    </header>
+    <section class="cart__container">
+        <div class="cart__container_products">
+            <div>
+                <h1>
+                    Seu Carrinho
+                </h1>
+                <h2>Total ({{amountItems}} produtos) {{totalPrice}}</h2>
+            </div>
+            <div *ngFor="let item of items">
+
+            </div>
+        </div>
+        <aside>
+
+        </aside>
+    </section>
+</div>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {products} from 'src/procucts';
+import { products } from 'src/procucts';
 
 @Component({
   selector: 'app-container-lvendas',

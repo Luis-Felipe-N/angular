@@ -1,2 +1,35 @@
 <app-header-lvendas></app-header-lvendas>
-<h1>Produtos</h1>
+<main class="products">
+    <header class="products__header">
+               
+        <a routerLink="/">
+            <svg aria-hidden="true" title="Voltar" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.25 6.75L4.75 12L10.25 17.25"></path>
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.25 12H5"></path>
+            </svg>  
+            Voltar
+        </a>
+    </header>
+    <section class="products__container" *ngIf="product">
+        <img src={{product.image_url}} alt={{product.name}}>
+
+        <section class="products__container_info">
+            <h3>Canecas</h3>
+            <h1>{{product.name}}</h1>
+
+            <h2>R$ {{product.price}}</h2>
+            
+            <p>* Frete de R$ 40,45 para todo o Brasil. Grátis para compras acima de R$ 99,99</p>
+
+            <div class="description">
+                <h3>Descrição</h3>
+                <p>{{product.description}}</p>
+            </div>
+
+            <button
+                (click)="addToCart(product)"
+            >
+            Adicionar ao carrinho</button>
+        </section>
+    </section>
+</main>
