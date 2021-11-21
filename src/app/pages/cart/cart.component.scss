@@ -1,0 +1,27 @@
+.cart {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 5%;
+
+    &__container {
+        display: flex;
+    }
+    &__products {
+        &_header {
+            h1 {
+                font-weight: 500;
+                color: var(--color-300);
+            }
+
+            h3 {
+                margin: 1rem 0;
+            }
+        }
+        .product {
+
+            border-radius: 5px;
+            display: flex;
+            background-color: var(--color-900);
+        }
+    }
+}

@@ -11,15 +11,30 @@
         </a>
     </header>
     <section class="cart__container">
-        <div class="cart__container_products">
-            <div>
+        <div class="cart__products">
+            <div  class="cart__products_header">
                 <h1>
                     Seu Carrinho
                 </h1>
-                <h2>Total ({{amountItems}} produtos) {{totalPrice}}</h2>
+                <h3>Total ({{amountItems}} produtos) {{totalPrice}}</h3>
             </div>
-            <div *ngFor="let item of items">
+            <div class="product" *ngFor="let item of items">
+                <img src={{item.image_url}} alt={{item.name}}>
 
+                <div class="product__content">
+                    <header class="product__content_header">
+                        <h1>{{item.name}}</h1>
+                        <button>remove item</button>
+                    </header>
+
+                    <p class="product__content_description">{{item.description}}</p>
+
+                    <div class="product__content_more">
+                        <strong>
+                            R$ {{item.price}}
+                        </strong>
+                    </div>
+                </div>
             </div>
         </div>
         <aside>
